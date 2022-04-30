@@ -34,3 +34,19 @@
   transform: scale(1.1);
   opacity: 1;
 }
+@media(max-width:450px){
+  .img{
+    object-fit: contain;
+    width: 100%;
+    max-height: 62px;
+    transition: transform 500ms;
+    margin-right: 9px;
+  }
+  .poster{
+    padding: 2px;
+  }
+  .row_title {
+   
+    font-size: 1rem;
+}
+}

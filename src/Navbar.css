@@ -9,7 +9,6 @@
 .nav_black {
   background-color: black;
   height: 65px;
-  
 }
 
 .btn {
@@ -17,34 +16,30 @@
   height: 30px;
   margin: 8px 0px;
   padding: 14px 5px;
-  padding-right:20px;
-  /* width: 95px; */
+  padding-right: 20px;
+ cursor: pointer;
   background: transparent;
   border: none;
   color: white;
   font-size: 1.1rem;
   font-weight: 600;
-
 }
 
 .btn:hover {
-  /* font-size: larger; */
   transition: all 0.35s;
-  /* background-color: white; */
+
   border-radius: 4px;
-  color :rgb(217, 18, 18);
-  
+  color: rgb(217, 18, 18);
 }
-.left{
+.left {
   margin-left: 21px;
-  
 }
-.btnl{
+.btnl {
   float: left;
   height: 30px;
   margin: 8px 0px;
   padding: 14px 10px;
-  /* width: 95px; */
+  cursor: pointer;
   background: transparent;
   border: none;
   color: white;
@@ -52,9 +47,28 @@
   font-weight: 600;
 }
 .btnl:hover {
-  /* font-size: larger; */
   transition: all 0.35s;
-  
+
   border-radius: 4px;
-  color :rgb(217, 18, 18);
+  color: rgb(217, 18, 18);
 }
+.hamburger{
+  display: none;
+}
+/* @media(max-width:1100px){
+  
+   .btn,.left{
+     display :none;
+   }
+   .hamburger{
+     font-size: 2.5 rem;
+     background-color: white;
+     
+   }
+  
+  .nav_black{
+    display: none;
+  }
+   } */
+
+
