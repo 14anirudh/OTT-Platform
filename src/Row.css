@@ -36,11 +36,10 @@
 }
 @media(max-width:450px){
   .img{
-    object-fit: contain;
-    width: 100%;
-    max-height: 62px;
-    transition: transform 500ms;
-    margin-right: 9px;
+    width: 146px;
+    height: 282px;
+   
+    margin-right: 4px;
   }
   .poster{
     padding: 2px;
