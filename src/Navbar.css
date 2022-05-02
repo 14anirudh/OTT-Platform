@@ -17,7 +17,7 @@
   margin: 8px 0px;
   padding: 14px 5px;
   padding-right: 20px;
- cursor: pointer;
+  cursor: pointer;
   background: transparent;
   border: none;
   color: white;
@@ -31,44 +31,77 @@
   border-radius: 4px;
   color: rgb(217, 18, 18);
 }
-.left {
-  margin-left: 21px;
-}
+
 .btnl {
   float: left;
-  height: 30px;
-  margin: 8px 0px;
-  padding: 14px 10px;
+  margin: 5px 0px;
   cursor: pointer;
   background: transparent;
-  border: none;
   color: white;
   font-size: 1.1rem;
   font-weight: 600;
+  margin-left: 21px;
+  display: flex;
+  padding: 8px 0px;
+}
+
+.nav {
+  float: left;
+  display: flex;
+  padding: 8px;
 }
 .btnl:hover {
   transition: all 0.35s;
-
   border-radius: 4px;
   color: rgb(217, 18, 18);
 }
-.hamburger{
+.hamburger {
   display: none;
+  cursor: pointer;
 }
-/* @media(max-width:1100px){
-  
-   .btn,.left{
-     display :none;
-   }
-   .hamburger{
-     font-size: 2.5 rem;
-     background-color: white;
-     
-   }
-  
-  .nav_black{
+
+@media (max-width: 1100px) {
+  .btnl {
     display: none;
   }
-   } */
+  .hamburger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    margin: 18.5px 0px;
+    /* padding: 8px 0px; */
+    padding-right: 20px;
+    background: transparent;
+    color: white;
+    padding-left: 21px;
+    font-size: 1.4rem;
+  }
+  .mobile {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    
+  }
+  .menu{
+    color: white;
+    margin-top: 10px;
+    float: left;
+    /* background: black; */
+    /* width: 100%; */
+    transition: all 0.3s;
+    padding: 5px;
+  }
+ 
+  
 
 
+  
+}
