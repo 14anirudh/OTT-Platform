@@ -44,9 +44,8 @@
   display: flex;
   padding: 8px 0px;
   text-decoration: none;
-  
 }
-.btnl li{
+.btnl li {
   font-size: 2rem;
 }
 
@@ -54,7 +53,6 @@
   float: left;
   display: flex;
   padding: 8px;
-
 }
 .btnl:hover {
   transition: all 0.35s;
@@ -65,36 +63,33 @@
   display: none;
   cursor: pointer;
 }
-.menu{
-  
-    color: white;
-    float: left;
-    /* margin: 5px 0px; */
-    cursor: pointer;
-    background: transparent;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 9px;
-    display: flex;
-    padding: 12px 0px;
-    text-decoration: none;
-    list-style: none;
-  }
- 
- .menu li{
-   padding-left: 8px;
-   text-decoration: none;
- }
- .menu li:hover{
-  color:rgb(217, 18, 18);
-  transition: all 0.35s;
-  
+.menu {
+  color: white;
+  float: left;
+
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 9px;
+  display: flex;
+  padding: 12px 0px;
+  text-decoration: none;
+  list-style: none;
 }
 
+.menu li {
+  padding-left: 8px;
+  text-decoration: none;
+}
+.menu li:hover {
+  color: rgb(217, 18, 18);
+  transition: all 0.35s;
+}
 
-@media (max-width: 1100px) {
-  .btn{
+@media (max-width: 400px) {
+  .btn {
     display: none;
   }
   .hamburger {
@@ -104,26 +99,23 @@
     float: left;
     height: 30px;
     margin: 18.5px 0px;
-    /* padding: 8px 0px; */
+
     padding-right: 20px;
     background: transparent;
     color: white;
     padding-left: 21px;
     font-size: 1.4rem;
-    
   }
- .menu{
-   font-size: 0;
-   padding: 0;
-   margin: 0;
-   list-style: none;
- }
- 
-#name{
-  margin: 9px;
-  padding-bottom: 5px;
-  font-size: 1.5rem;
-}
+  .menu {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 
+  #name {
+    margin: 9px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+  }
 }
- 

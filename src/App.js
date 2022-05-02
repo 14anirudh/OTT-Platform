@@ -8,8 +8,8 @@ import Navbar from "./Navbar.js";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Banner/>
+      <Navbar />
+      <Banner />
       <Row
         title="Trending"
         fetchUrl={requests.fetchTrending}
