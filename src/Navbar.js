@@ -20,10 +20,10 @@ function Navbar() {
   return (
     <div className={`navbar ${show && "nav_black"}`}>
       <div className="hamburger" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-        <a href="#" >
+     
         <GiHamburgerMenu />
-        </a>
-        <p> FLICKERS</p>
+      
+        <p id="name"> FLICKERS</p>
       </div>
       <div className="nav">
         <ul className="menu">
