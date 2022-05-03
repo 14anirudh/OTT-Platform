@@ -87,7 +87,7 @@
   transition: all 0.35s;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .btn {
     display: none;
   }
@@ -111,7 +111,7 @@
     list-style: none;
   }
 
-  #name {
+  .name {
     margin: 9px;
     padding-bottom: 5px;
     font-size: 1.5rem;

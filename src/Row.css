@@ -25,7 +25,6 @@
 
 .img:hover {
   transform: scale(1.1);
-  
 }
 .largeimg {
   max-height: 250px;
@@ -34,18 +33,17 @@
   transform: scale(1.1);
   opacity: 1;
 }
-@media(max-width:450px){
-  .img{
+@media (max-width: 450px) {
+  .img {
     width: 146px;
     height: 282px;
-   
+
     margin-right: 4px;
   }
-  .poster{
+  .poster {
     padding: 2px;
   }
   .row_title {
-   
     font-size: 1rem;
-}
+  }
 }
