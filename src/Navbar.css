@@ -73,7 +73,7 @@
   font-weight: 700;
   margin-left: 9px;
   display: flex;
-  padding: 12px 0px;
+  padding: 10px 0px;
   text-decoration: none;
   list-style: none;
 }
@@ -115,5 +115,9 @@
     margin: 1px;
     padding-bottom: 1px;
     font-size: 1.3rem;
+  }
+  .nav_black {
+    background-color: black;
+    height: 45px;
   }
 }

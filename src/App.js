@@ -15,11 +15,14 @@ function App() {
         fetchUrl={requests.fetchTrending}
         isLargeRow={true} /*default true without anuything*/
       />
+      
       <Row title="Action movies" fetchUrl={requests.fetchActionMovies} />
       <Row title="Romantic movies" fetchUrl={requests.fetchRomanceMovies} />
 
       <Row title="Horror movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Comedy movies" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Top Grossing" fetchUrl={requests.fetchTopRated}/>
+      <Row title="Old Movies" fetchUrl={requests.fetchOldMovies}/>
     </div>
   );
 }
