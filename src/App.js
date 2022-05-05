@@ -12,24 +12,19 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 6000);
   }, []);
   return (
     <div className="App">
-      
-        {loading ? (
+      {loading ? (
         <SpinnerDotted
           size={57}
           thickness={100}
           speed={100}
           color="rgb(217, 18, 18)"
           className="loader"
-          
-         
         />
-       
-      ) 
-      : (
+      ) : (
         <>
           <Navbar />
           <Banner />
@@ -38,17 +33,15 @@ function App() {
             fetchUrl={requests.fetchTrending}
             isLargeRow={true}
           />
-
+          <Row title="Top Grossing" fetchUrl={requests.fetchTopGrossing} />
+          <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
           <Row title="Action movies" fetchUrl={requests.fetchActionMovies} />
           <Row title="Romantic movies" fetchUrl={requests.fetchRomanceMovies} />
-
           <Row title="Horror movies" fetchUrl={requests.fetchHorrorMovies} />
           <Row title="Comedy movies" fetchUrl={requests.fetchComedyMovies} />
-          <Row title="Top Grossing" fetchUrl={requests.fetchTopRated} />
           <Row title="Old Movies" fetchUrl={requests.fetchOldMovies} />
         </>
       )}
-      
     </div>
   );
 }

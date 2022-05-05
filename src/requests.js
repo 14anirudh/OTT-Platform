@@ -6,8 +6,9 @@ const requests = {
   fetchComedyMovies: `/discover/movie?api_key=${api_key}&with_genres=35`,
   fetchHorrorMovies: `/discover/movie?api_key=${api_key}&with_genres=27`,
   fetchRomanceMovies: `/discover/movie?api_key=${api_key}&with_genres=10749`,
-  fetchTopRated:`/discover/movie?api_key=${api_key}&language=en-US&sort_by=revenue.desc&include_adult=false&include_video=true&page=1&with_watch_monetization_types=flatrate`,
-  fetchOldMovies:`/discover/movie?api_key=${api_key}&language=en-US&sort_by=release_date.asc&include_adult=false&include_video=true&page=1&year=2001&with_watch_monetization_types=flatrate`
+  fetchTopGrossing:`/discover/movie?api_key=${api_key}&language=en-US&sort_by=revenue.desc&include_adult=false&include_video=true&page=1&with_watch_monetization_types=flatrate`,
+  fetchOldMovies:`/discover/movie?api_key=${api_key}&language=en-US&sort_by=release_date.asc&include_adult=false&include_video=true&page=1&year=2001&with_watch_monetization_types=flatrate`,
+  fetchTopRated:`/discover/movie?api_key=${api_key}&language=en-US&sort_by=vote_count.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
 };
 
 export default requests;
