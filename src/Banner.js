@@ -3,6 +3,7 @@ import axios from "./axios";
 import requests from "./requests";
 import "./Banner.css";
 
+
 function Banner() {
   const [movie, setMovie] = useState([]);
 
@@ -25,6 +26,7 @@ function Banner() {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   } // for truncating the movie overview to n characters.
 
+ 
   return (
     <header
       className="banner"
@@ -39,6 +41,7 @@ function Banner() {
         <h1 className="title">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
+        
         <div className="buttons">
           <button className="button">Play Now</button>
           <button className="button">Add to Watchlist</button>
@@ -46,6 +49,7 @@ function Banner() {
         <h2 className="description">{truncate(movie?.overview, 100)}</h2>
       </div>
       <div className="fadebutton" />
+      
     </header>
   );
 }

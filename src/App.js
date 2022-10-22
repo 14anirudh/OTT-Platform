@@ -1,48 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import Row from "./Row";
-import requests from "./requests";
-import Banner from "./Banner.js";
-import Navbar from "./Navbar.js";
-import { SpinnerDotted } from "spinners-react";
+import Home from "./Home";
+import Subscribe from "./Subscribe";
+
+import {Routes, Route,} from 'react-router-dom';
+import Login from "./Login"
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 6000);
-  }, []);
   return (
     <div className="App">
-      {loading ? (
-        <SpinnerDotted
-          size={57}
-          thickness={100}
-          speed={100}
-          color="rgb(217, 18, 18)"
-          className="loader"
-        />
-      ) : (
-        <>
-          <Navbar />
-          <Banner />
-          <Row
-            title="Trending"
-            fetchUrl={requests.fetchTrending}
-            isLargeRow={true}
-          />
-          <Row title="Top Grossing" fetchUrl={requests.fetchTopGrossing} />
-          <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-          <Row title="Action movies" fetchUrl={requests.fetchActionMovies} />
-          <Row title="Romantic movies" fetchUrl={requests.fetchRomanceMovies} />
-          <Row title="Horror movies" fetchUrl={requests.fetchHorrorMovies} />
-          <Row title="Comedy movies" fetchUrl={requests.fetchComedyMovies} />
-          <Row title="Old Movies" fetchUrl={requests.fetchOldMovies} />
-        </>
-      )}
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Subscribe />} />
+      </Routes>
+
     </div>
+    
   );
 }
 

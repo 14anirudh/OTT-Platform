@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .navbar {
   position: sticky;
   top: 0;
@@ -113,8 +114,9 @@
 
   .name {
     margin: 1px;
-    padding-bottom: 1px;
-    font-size: 1.3rem;
+    padding-top:2px;
+    font-size: 1.35rem;
+    font-family: 'Bebas Neue', cursive;
   }
   .nav_black {
     background-color: black;

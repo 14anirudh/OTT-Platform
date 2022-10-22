@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [show, handleShow] = useState(false);
@@ -37,10 +38,14 @@ function Navbar() {
       </div>
 
       <div>
-        <button className="btn" id="sub">
-          Subscribe
-        </button>
-        <button className="btn">Log In</button>
+        <Link to="/Subscribe">
+          <button className="btn" id="sub">
+            Subscribe
+          </button>
+        </Link>
+        <Link to="/Login">
+          <button className="btn">Log In</button>
+        </Link>
       </div>
     </div>
   );
