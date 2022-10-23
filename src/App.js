@@ -5,6 +5,7 @@ import Subscribe from "./Subscribe";
 
 import {Routes, Route,} from 'react-router-dom';
 import Login from "./Login"
+import Tv from "./Tv";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/subscription" element={<Subscribe />} />
+      <Route path="/tv_shows" element={<Tv />} />
       </Routes>
 
     </div>

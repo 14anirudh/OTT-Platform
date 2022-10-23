@@ -20,13 +20,13 @@ const Login = () => {
          <img
            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
            class="w-full"
-           alt="Sample image"
+           alt="Sample"
          />
        </div>
        <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
          <form>
            <div class="flex flex-row items-center justify-center lg:justify-start">
-             <p class="text-lg mb-0 mr-4">Sign in with</p>
+             <p class="text-3xl mb-0 mr-4">Sign in with</p>
              <button
                type="button"
                data-mdb-ripple="true"

@@ -31,7 +31,7 @@ function Navbar() {
       <div className="nav">
         <ul className="menu">
           <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Home</li>
-          <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Tv shows</li>
+          <Link to="/tv_shows"><li className={showMediaIcons ? "btnl" : "mobile-menu"}>Tv shows</li></Link>
           <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Movies</li>
           <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Sports</li>
         </ul>

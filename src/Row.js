@@ -41,7 +41,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
   //       .catch((error) => console.log(error));
   //   }
   // };
- 
 
   return (
     <div className="row">
@@ -51,7 +50,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
           <img
             key={movie.id}
             // onClick={() => handleClick()}
-            
+
             className={`img  ${isLargeRow && "largeimg"}`}
             src={`${baseURL}${
               isLargeRow ? movie.poster_path : movie.backdrop_path
@@ -60,7 +59,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
           />
         ))}
       </div>
- 
     </div>
   );
 }
