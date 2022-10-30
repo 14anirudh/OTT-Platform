@@ -6,7 +6,18 @@ import "./Banner.css";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
-
+  const [moviedesc, setMoviedesc] = useState("Movie Overview");
+  const[value,setValue]=useState(0);
+  const handleClick=()=>{
+    if(value===0){
+    setMoviedesc(movie?.overview);
+    setValue(1)
+    }
+    else{
+      setMoviedesc(truncate(movie?.overview,100));
+      setValue(0)
+    }
+  }
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fetchTrending);
@@ -23,9 +34,9 @@ function Banner() {
   console.log(movie);
 
   function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+    return str?.length > n ? str.substr(0, n - 1): str;
   } // for truncating the movie overview to n characters.
-
+ 
  
   return (
     <header
@@ -46,7 +57,7 @@ function Banner() {
           <button className="button">Play Now</button>
           <button className="button">Add to Watchlist</button>
         </div>
-        <h2 className="description">{truncate(movie?.overview, 100)}</h2>
+        <h2 className="description">{moviedesc}{value===0?<button className="text-[#D91212]" onClick={handleClick}>...more</button>:<button className="text-[#D91212]" onClick={handleClick}>&#160;...less</button>}</h2>
       </div>
       <div className="fadebutton" />
       
