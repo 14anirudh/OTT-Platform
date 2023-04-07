@@ -38,12 +38,12 @@ function Navbar() {
       </div>
 
       <div>
-        <Link to="/Subscribe">
+        <Link to="/subscription">
           <button className="btn" id="sub">
             Subscribe
           </button>
         </Link>
-        <Link to="/Login">
+        <Link to="/login">
           <button className="btn">Log In</button>
         </Link>
       </div>
