@@ -1,11 +1,13 @@
 import React,{useState} from 'react'
 import { UserAuth } from './context/AuthContext';
+import {useNavigate} from 'react-router-dom';
 
 const Subscribe = () => {
 
   const [email, setEmail] =useState('');
   const [password, setPassword] =useState('');
   const[error, setError] =useState('');
+  const navigate=useNavigate();
 
   const { createUser } = UserAuth();
 
@@ -14,10 +16,11 @@ const Subscribe = () => {
     setError('');
     try {
       await createUser(email, password);
+      navigate('/login');
       
     } catch (e) {
       setError(e.message);
-      alert(e.message);
+      console.log(e.message);
     }
   };
   return (
@@ -25,7 +28,9 @@ const Subscribe = () => {
        className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
      >
     <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-    <form >
+    <form onClick={
+                handleSubmit
+               }>
            {/* <!-- Email input --> */}
            <div className="mb-6">
              <input
@@ -54,9 +59,7 @@ const Subscribe = () => {
              <button
                type="button"
                className="inline-block px-7 py-3 bg-[#EB4544]  text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#D91212]  hover:shadow-lg focus:bg-[#EB4544]  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#EB4544]  active:shadow-lg transition duration-150 ease-in-out"
-               onClick={
-                handleSubmit
-               }
+               
              >
                Sign up
              </button>
