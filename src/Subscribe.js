@@ -16,7 +16,7 @@ const Subscribe = () => {
     setError('');
     try {
       await createUser(email, password);
-      navigate('/login');
+      navigate('/home');
       
     } catch (e) {
       setError(e.message);

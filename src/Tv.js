@@ -29,7 +29,7 @@ return (
     <div>
         <div className="d-flex flex justify-between">
         <h1 className='mx-4 text-4xl text-[#D91212] font-bold py-4'>TV SHOWS</h1>
-        <Link to ="/"><button className='p-4 text-[#D91212]'>Back to Home</button></Link>
+        <Link to ="/home"><button className='p-4 text-[#D91212]'>Back to Home</button></Link>
         </div>
         <Row title="Airing Today" rating={movies.author_details?.rating} fetchUrl={requests.fetchtvtoday} isLargeRow={true} />
         <Row title="Trending in TV" fetchUrl={requests.fetchtv} isLargeRow={true} />

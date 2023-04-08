@@ -18,7 +18,7 @@ const Login = () => {
     setError('')
     try {
       await signIn(email, password)
-      navigate('/')
+      navigate('/home')
     } catch (e) {
       setError(e.message)
       console.log(e.message)
@@ -38,7 +38,7 @@ const Login = () => {
   return (
     <>
       <div>
-        <Link to="/">
+        <Link to="/home">
           <h1 className="text-4xl mx-4 pt-3 text-[#D91212] font-bold ">
             FLICKERS
           </h1>
