@@ -56,11 +56,15 @@ function Navbar() {
       </div>
 
       <div>
-        <Link to="/">
+          <button className="btn">
+            Watchlist
+          </button>
+          
           <button className="btn" onClick={handleLogout}>
             Intermission
           </button>
-        </Link>
+        
+          
       </div>
     </div>
   );

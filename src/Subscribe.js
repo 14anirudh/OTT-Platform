@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { UserAuth } from './context/AuthContext';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate ,Link} from 'react-router-dom';
 
 const Subscribe = () => {
 
@@ -16,7 +16,7 @@ const Subscribe = () => {
     setError('');
     try {
       await createUser(email, password);
-      navigate('/home');
+      navigate('/payment');
       
     } catch (e) {
       setError(e.message);
@@ -25,12 +25,16 @@ const Subscribe = () => {
   };
   return (
     <div
-       className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
+       className="flex flex-col xl:justify-center lg:justify-between justify-center items-center flex-wrap h-screen g-6"
      >
-    <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-    <form onClick={
-                handleSubmit
-               }>
+      <div className="xl:ml-12 xl:w-4/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+      <Link to="/"><h1 className="text-4xl text-center mx-4 pt-3 text-[#D91212] font-bold ">
+            FLICKERS
+          </h1></Link>
+      <p className='text-xl mt-4 text-[#12D9D9] text-center font-bold '>Discover new worlds with access to </p>
+      <p className='text-xl mb-16 text-[#12D9D9] text-center font-bold '>thousands of titles</p>
+    
+    <form >
            {/* <!-- Email input --> */}
            <div className="mb-6">
              <input
@@ -55,13 +59,13 @@ const Subscribe = () => {
  
           
  
-           <div className="text-center lg:text-left">
+           <div className="text-center ">
              <button
                type="button"
-               className="inline-block px-7 py-3 bg-[#EB4544]  text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#D91212]  hover:shadow-lg focus:bg-[#EB4544]  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#EB4544]  active:shadow-lg transition duration-150 ease-in-out"
-               
-             >
-               Sign up
+               className="inline-block px-2 py-3 bg-[#EB4544]  text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#D91212]  hover:shadow-lg focus:bg-[#EB4544]  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#EB4544]  active:shadow-lg transition duration-150 ease-in-out"
+               onClick={handleSubmit}
+               >
+               Proceed for Payment
              </button>
              
            </div>

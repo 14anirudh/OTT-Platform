@@ -8,6 +8,8 @@ import Login from "./Login";
 import Tv from "./Tv";
 import { AuthContextProvider } from "./context/AuthContext";
 import Protected from "./Protected";
+import Watchlist from "./Watchlist";
+import Payment from "./Payment";
 
 function App() {
   return (
@@ -26,7 +28,9 @@ function App() {
           />
 
           <Route path="/subscription" element={<Subscribe />} />
-          <Route path="/tv_shows" element={<Tv />} />
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/tv_shows" element={<Protected><Tv /></Protected>} />
         </Routes>
       </AuthContextProvider>
     </div>
