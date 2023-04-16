@@ -10,6 +10,7 @@ import { AuthContextProvider } from "./context/AuthContext";
 import Protected from "./Protected";
 import Watchlist from "./Watchlist";
 import Payment from "./Payment";
+import StripeContainer from "./StripeContainer";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
 
           <Route path="/subscription" element={<Subscribe />} />
           <Route path="/watchlist" element={<Watchlist />} />
-          <Route path="/payment" element={<Payment />} />
+          <Route path="/payment" element={<StripeContainer />} />
           <Route path="/tv_shows" element={<Protected><Tv /></Protected>} />
         </Routes>
       </AuthContextProvider>

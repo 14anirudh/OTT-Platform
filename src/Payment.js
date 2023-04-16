@@ -1,101 +1,83 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
+import axios from "axios"
+import "./Payment.css"
+import { Link } from 'react-router-dom';
+
+const CARD_OPTIONS = {
+	iconStyle: "solid",
+	style: {
+		base: {
+			iconColor: "#c4f0ff",
+			color: "#fff",
+			fontWeight: 500,
+			fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
+			fontSize: "16px",
+			fontSmoothing: "antialiased",
+			":-webkit-autofill": { color: "#fce883" },
+			"::placeholder": { color: "#87bbfd" }
+		},
+		invalid: {
+			iconColor: "#ffc7ee",
+			color: "#ffc7ee"
+		}
+	}
+}
 
 const Payment = () => {
+    const [success, setSuccess ] = useState(false)
+    const stripe = useStripe()
+    const elements = useElements()
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const {error, paymentMethod} = await stripe.createPaymentMethod({
+            type: "card",
+            card: elements.getElement(CardElement)
+        })
+
+
+    if(!error) {
+        try {
+            const {id} = paymentMethod
+            const response = await axios.post("http://localhost:4000/payment", {
+                amount: 1000,
+                id
+            })
+
+            if(response.data.success) {
+                console.log("Payment Successful")
+                setSuccess(true)
+            }
+
+        } catch (error) {
+            console.log("Error", error)
+        }
+    } else {
+        console.log(error.message)
+    }
+}
   return (
-    <div>
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
-              Pricing
-            </h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
-            </p>
+    <div className='w-[50%] m-auto mt-16'>
+       <>
+        {!success ? 
+        <form onSubmit={handleSubmit} >
+            <fieldset className="FormGroup">
+                <div className="FormRow">
+                    <CardElement options={CARD_OPTIONS}/>
+                </div>
+            </fieldset>
+            <button>Pay</button>
+        </form>
+        :
+       <div>
+           <h2 className='text-black'>You have now gained access to a new World.Keep Binging!!</h2>
+           <Link to="/home"></Link><button>Go to the movie library</button>
+       </div> 
+        }
             
-          </div>
-          <div class="flex flex-wrap -m-4">
-            
-            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-              <div class="h-full p-6 rounded-lg border-2 border-red-500 flex flex-col relative overflow-hidden">
-                <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
-                  <span>&#8377;1500</span>
-                  <span class="text-lg ml-1 font-normal text-gray-500">
-                    /year
-                  </span>
-                </h1>
-                <p class="flex items-center text-gray-600 mb-2">
-                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2.5"
-                      class="w-3 h-3"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                  </span>
-                  4K 2160p Streaming
-                </p>
-                <p class="flex items-center text-gray-600 mb-2">
-                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2.5"
-                      class="w-3 h-3"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                  </span>
-                  Dolby Atmos
-                </p>
-                <p class="flex items-center text-gray-600 mb-2">
-                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2.5"
-                      class="w-3 h-3"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M20 6L9 17l-5-5"></path>
-                    </svg>
-                  </span>
-                  Watch Anytime Anywhere
-                </p>
-          
-                <button class="flex items-center mt-auto text-white bg-red-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-red-600 rounded">
-                  Button
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-4 h-4 ml-auto"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </button>
-                <p class="text-xs text-gray-500 mt-3">
-                  Literally you probably haven't heard of them jean shorts.
-                </p>
-              </div>
-            </div>
-           
-          </div>
-        </div>
-      </section>
+        </>
     </div>
   )
 }
