@@ -41,7 +41,7 @@ const Payment = () => {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post("http://localhost:4000/payment", {
+            const response = await axios.post("https://helpful-elk-pinafore.cyclic.app/payment", {
                 amount: 1000,
                 id
             })
@@ -73,7 +73,7 @@ const Payment = () => {
         :
        <div>
            <h2 className='text-black'>You have now gained access to a new World.Keep Binging!!</h2>
-           <Link to="/home"></Link><button>Go to the movie library</button>
+           <Link to="/"></Link><button>explore the movie library</button>
        </div> 
         }
             
