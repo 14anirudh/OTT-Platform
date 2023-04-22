@@ -1,14 +1,13 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   /* background-color: black; */
   /* color: white; */
 }
 .App {
-  /* background-color: black; */
-  color: whitesmoke;
- 
- 
+   background-color: black; 
+   color: whitesmoke;
 }
 /* .loader{
   display: flex;

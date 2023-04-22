@@ -41,7 +41,8 @@ const Payment = () => {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post("https://helpful-elk-pinafore.cyclic.app/payment", {
+            // const response = await axios.post("https://helpful-elk-pinafore.cyclic.app/payment", {
+            const response = await axios.post("http://localhost:4000/payment", {
                 amount: 1000,
                 id
             })
@@ -59,7 +60,7 @@ const Payment = () => {
     }
 }
   return (
-    <div className='w-[50%] m-auto mt-16'>
+    <div className='w-[50%] m-auto pt-16 h-screen'>
        <>
         {!success ? 
         <form onSubmit={handleSubmit} >
@@ -68,17 +69,18 @@ const Payment = () => {
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
-            <button>Pay</button>
+            <button className='pay_button'>Pay</button>
         </form>
         :
-       <div>
-           <h2 className='text-black'>You have now gained access to a new World.Keep Binging!!</h2>
-           <Link to="/"></Link><button>explore the movie library</button>
+       <div className='h-full'>
+           <h2 className='text-whitesmoke text-xl text-center'>You have now gained access to a new World.Keep Binging!!</h2>
+           <Link to="/home"><button className='pay_button'>explore the movie library</button></Link>
        </div> 
         }
             
         </>
     </div>
+    
   )
 }
 

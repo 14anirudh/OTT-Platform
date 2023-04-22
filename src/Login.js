@@ -58,7 +58,7 @@ const Login = () => {
             <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
               <form>
                 <div className="flex items-center justify-center lg:justify-start">
-                  <p className="text-3xl mb-0 mr-4 mb-6">SIGN IN </p>
+                  <p className="text-3xl mr-4 mb-6">SIGN IN </p>
 
                 </div>
 
