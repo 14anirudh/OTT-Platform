@@ -6,7 +6,8 @@
   /* color: white; */
 }
 .App {
-   background-color: black; 
+   /* background-color: black;  */
+   background: -webkit-linear-gradient(90deg, #250f2b,#070112);background: linear-gradient(90deg, #250f2b,#070112);
    color: whitesmoke;
 }
 /* .loader{

@@ -28,9 +28,8 @@
 
 .btn:hover {
   transition: all 0.35s;
-
   border-radius: 4px;
-  color: rgb(217, 18, 18);
+  color:#ba9bce;
 }
 
 .btnl {
@@ -58,7 +57,7 @@
 .btnl:hover {
   transition: all 0.35s;
   border-radius: 4px;
-  color: rgb(217, 18, 18);
+  color: #ba9bce;
 }
 .hamburger {
   display: none;
@@ -84,7 +83,7 @@
   text-decoration: none;
 }
 .menu li:hover {
-  color: rgb(217, 18, 18);
+  color: #ba9bce;
   transition: all 0.35s;
 }
 

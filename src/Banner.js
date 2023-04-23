@@ -101,11 +101,11 @@ function Banner() {
         <h2 className="description">
           {moviedesc}
           {value === 0 ? (
-            <button className="text-[#D91212]" onClick={handleClick}>
+            <button className="text-pink-500" onClick={handleClick}>
               ...more
             </button>
           ) : (
-            <button className="text-[#D91212]" onClick={handleClick}>
+            <button className="text-pink-500" onClick={handleClick}>
               &#160;...less
             </button>
           )}
