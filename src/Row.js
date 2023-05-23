@@ -59,6 +59,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   return (
     <div className="row">
       <h2 className="row_title">{title}</h2>
+       
        <div className="poster">
           {movies.map((movie) => (
             <img
@@ -71,8 +72,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
               alt={movie.title}
               // onClick={handleMovie}
             />
+            
           ))}
         </div>
+       
     
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>

@@ -1,7 +1,7 @@
 .banner {
   color: white;
   object-fit: contain;
-  height: 500px;
+  height: 525px;
 }
 .content {
   margin-left: 20px;
@@ -20,7 +20,7 @@
   /* transition: transform 200ms; */
 }
 .button:hover {
-  color: #ba9bce;
+  color: #9AE39A;
 }
 
 .title {

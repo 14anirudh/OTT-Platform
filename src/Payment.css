@@ -2,7 +2,7 @@
 	margin: 0 15px 20px;
 	padding: 0;
 	border-style: none;
-	background-color: #efe2f7;
+	background-color: #9AE39A;
 	will-change: opacity, transform;
 	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #829fff;
 	border-radius: 4px;
@@ -41,7 +41,7 @@
 	background-color: #8E6E9F;
 	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #ffb9f6;
 	border-radius: 4px;
-	color: #efe2f7;
+	color: #9AE39A;
 	font-weight: 600;
 	cursor: pointer;
 	transition: all 100ms ease-in-out;
@@ -51,7 +51,7 @@
 }
 
 .pay_button:active {
-	background-color: #efe2f7;
+	background-color: #9AE39A;
 	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 #e298d8;
 	transform: scale(0.99);
 	color:#180920

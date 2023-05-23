@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <>
       <div>
-        <h1 className="text-4xl mx-4 pt-3 text-[#efe2f7] font-bold ">
+        <h1 className="text-4xl mx-4 pt-3 text-[#9AE39A] font-bold ">
           FLICKERS
         </h1>
       </div>
@@ -46,7 +46,7 @@ const Login = () => {
           <p>user email :{user && user.email}</p>
           <button onClick={handleLogout}>logout</button>
         </div> */}
-        <div className="px-6 h-full text-[#efe2f7] ">
+        <div className="px-6 h-full text-[#9AE39A] ">
           <div className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
             <div className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
               <img
@@ -96,16 +96,16 @@ const Login = () => {
                   <div className="form-group form-check">
                     
                   </div>
-                  <a href="#!" className="text-[#8E6E9F] hover:text-[#efe2f7]">
+                  <Link to="/forget" className="text-[#8E6E9F] hover:text-[#9AE39A]">
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="text-center lg:text-left">
                   <button
                     onClick={handleSubmit}
                     type="button"
-                    className="inline-block w-[100%] px-7 py-3 bg-[#efe2f7]  text-[#180920] font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#8E6E9F] hover:text-[#efe2f7] hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#efe2f7]  active:shadow-lg transition duration-150 ease-in-out"
+                    className="inline-block w-[100%] px-7 py-3 bg-[#8E6E9F]  text-[#180920] font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#8E6E9F] hover:text-[#9AE39A] hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#180920]  active:shadow-lg transition duration-150 ease-in-out"
                   >
                     Login
                   </button>
@@ -113,7 +113,7 @@ const Login = () => {
                     Don't have an account?
                     <a
                       href="/subscription"
-                      className="text-[#8E6E9F]  hover:text-[#efe2f7]  focus:text-[#8E6E9F]  transition duration-200 ease-in-out"
+                      className="text-[#8E6E9F]  hover:text-[#9AE39A]  focus:text-[#8E6E9F]  transition duration-200 ease-in-out"
                     >
                       {" "}
                       Subscribe Now
