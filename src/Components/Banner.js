@@ -93,9 +93,9 @@ function Banner() {
         </h1>
 
         <div className="buttons">
-          <button className="button" onClick={() => handlePlay(movie)}>
+          {/* <button className="button" onClick={() => handlePlay(movie)}>
             Play Now
-          </button>
+          </button> */}
           <button className="button">Add to Watchlist</button>
         </div>
         <h2 className="description">
@@ -110,13 +110,11 @@ function Banner() {
             </button>
           )}
         </h2>
-        
       </div>
       {/* <div className="">
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </div> */}
-     
-     
+
       {/* <div className="fadebutton" /> */}
     </header>
   );

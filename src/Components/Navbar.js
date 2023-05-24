@@ -50,23 +50,21 @@ function Navbar() {
               Tv shows
             </li>
           </Link>
-          <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Movies</li>
-          <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Sports</li>
+          <Link to="/movies">
+            <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Movies</li>
+          </Link>
+          {/* <li className={showMediaIcons ? "btnl" : "mobile-menu"}>Sports</li> */}
         </ul>
       </div>
 
       <div>
         <Link to="/watchlist">
-          <button className="btn">
-            Watchlist
-          </button>
-          </Link>
-          
-          <button className="btn" onClick={handleLogout}>
-            Intermission
-          </button>
-        
-          
+          <button className="btn">Watchlist</button>
+        </Link>
+
+        <button className="btn" onClick={handleLogout}>
+          Intermission
+        </button>
       </div>
     </div>
   );

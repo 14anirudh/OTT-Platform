@@ -5,10 +5,10 @@ import Subscribe from "./Components/Subscribe";
 import { Routes, Route } from "react-router-dom";
 import Login from "./Components/Login";
 import Tv from "./Components/Tv";
+import Movies from "./Components/Movies";
 import { AuthContextProvider } from "./context/AuthContext";
 import Protected from "./Protected";
 import Watchlist from "./Components/Watchlist";
-import Payment from "./Components/Payment";
 import StripeContainer from "./StripeContainer";
 import Reset from "./Components/Reset";
 import Forget from "./Components/Forget"
@@ -34,6 +34,7 @@ function App() {
           <Route path="/forget" element={<Forget />} />
           <Route path="/reset" element={<Reset />} />
           <Route path="/tv_shows" element={<Protected><Tv /></Protected>} />
+          <Route path="/movies" element={<Protected><Movies /></Protected>} />
         </Routes>
       </AuthContextProvider>
     </div>
