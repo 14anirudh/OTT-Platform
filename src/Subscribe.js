@@ -69,8 +69,7 @@ const Subscribe = () => {
           <div className="text-center ">
             <button
               type="button"
-              className="inline-block px-2 py-3 bg-[#9AE39A]  text-[#180920] font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#8E6E9F]
-               hover:text-[#9AE39A] hover:shadow-lg focus:bg-[#9AE39A]  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#9AE39A]  active:shadow-lg transition duration-150 ease-in-out"
+              className="inline-block w-[100%] px-7 py-3 bg-[#9AE39A]  text-[#180920] font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#8E6E9F] hover:text-[#9AE39A] hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#180920]  active:shadow-lg transition duration-150 ease-in-out"
               onClick={handleSubmit}
             >
               Proceed for Payment
