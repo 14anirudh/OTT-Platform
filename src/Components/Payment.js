@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
-import "./Payment.css";
+import "../Styles/Payment.css";
 import { Link } from "react-router-dom";
 import { toastr } from "react-redux-toastr";
 

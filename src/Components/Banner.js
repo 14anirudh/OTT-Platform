@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "./axios";
-import requests from "./requests";
-import "./Banner.css";
+import axios from "../axios";
+import requests from "../requests";
+import "../Styles/Banner.css";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 

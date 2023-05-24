@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Banner from "./Banner.js";
 import Row from "./Row";
-import requests from "./requests";
+import requests from "../requests";
 
 const Home = () => {
   return <>

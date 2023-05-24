@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { UserAuth } from "./context/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 import { toastr } from "react-redux-toastr";
 
 const Forget = () => {
@@ -28,21 +28,21 @@ const Forget = () => {
     <div className="h-screen">
       <section>
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
-          <div className="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+          <div className="w-full p-6 rounded-lg shadow dark:border md:mt-0 sm:max-w-md sm:p-8">
             <Link to="/">
-              <p className=" mb-6 text-4xl font-bold text-[#180920] text-center">
+              <p className=" mb-6 text-4xl font-bold text-[#9AE39A] text-center">
                 FLICKERS
               </p>
             </Link>
 
-            <h2 className="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            <h2 className="mb-1 text-xl font-bold leading-tight tracking-tight text-[#8E6E9F] md:text-2xl dark:text-white">
               Forgot your password? No worries we got you covered.
             </h2>
             <form className="mt-4 space-y-4 lg:mt-5 md:space-y-5">
               <div>
                 <label
                   for="email"
-                  className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-lg font-medium text-[#8E6E9F] dark:text-white"
                 >
                   Your email
                 </label>
@@ -60,7 +60,7 @@ const Forget = () => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="w-full text-black bg-primary-800 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 border"
+                className="inline-block w-[100%] px-7 py-3 bg-[#9AE39A]  text-[#180920] font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#8E6E9F] hover:text-[#9AE39A] hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#180920]  active:shadow-lg transition duration-150 ease-in-out"
               >
                 Reset password
               </button>

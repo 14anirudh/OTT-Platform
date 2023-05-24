@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { UserAuth } from "./context/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { toastr } from "react-redux-toastr";
 
@@ -26,7 +26,7 @@ const Subscribe = () => {
   };
   return (
     <div className="flex flex-col xl:justify-center lg:justify-between justify-center items-center flex-wrap h-screen g-6">
-      <div className="xl:ml-12 xl:w-4/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+      <div className="xl:ml-12 xl:w-4/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0 ">
         <Link to="/">
           <h1 className="text-4xl text-center mx-4 pt-3 text-[#9AE39A] font-bold ">
             FLICKERS

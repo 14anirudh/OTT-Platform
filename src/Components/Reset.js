@@ -1,18 +1,27 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { UserAuth } from "./context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
+import { Toastr, toastr } from "react-redux-toastr";
 
 const Reset = () => {
   const { confirmPassword } = UserAuth();
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    const code =new URLSearchParams(window.location.search).get("oobCode");
+    e.preventDefault();
+    setError("");
+    const code = new URLSearchParams(window.location.search).get("oobCode");
     console.log(code);
     try {
       await confirmPassword(code, password);
+      toastr.success("Password Updates Successfully");
+      navigate("/");
     } catch (e) {
+      setError(e.message);
       console.log(e.message);
+      toastr.error("Error", e.message.substring(10, e.message.indexOf(".")));
     }
   };
 
@@ -20,9 +29,9 @@ const Reset = () => {
     <div className="h-screen">
       <section>
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
-          <div className="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+          <div className="w-full p-6 rounded-lg shadow dark:border md:mt-0 sm:max-w-md sm:p-8">
             <Link to="/">
-              <p className=" mb-6 text-4xl font-bold text-[#180920] text-center">
+              <p className=" mb-12 text-4xl font-bold text-[#9AE39A] text-center">
                 FLICKERS
               </p>
             </Link>
@@ -30,7 +39,7 @@ const Reset = () => {
               <div>
                 <label
                   for="password"
-                  className="block mb-2 text-lg font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-lg font-medium text-[#8E6E9F] dark:text-white"
                 >
                   Enter new password
                 </label>
@@ -47,7 +56,7 @@ const Reset = () => {
               <button
                 type="submit"
                 onClick={handleSubmit}
-                className="w-full text-black bg-primary-800 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 border"
+                className="inline-block w-[100%] px-7 py-3 bg-[#9AE39A]  text-[#180920] font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#8E6E9F] hover:text-[#9AE39A] hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#180920]  active:shadow-lg transition duration-150 ease-in-out"
               >
                 Reset password
               </button>

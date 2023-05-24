@@ -1,17 +1,17 @@
 import React from "react";
 import "./App.css";
-import Home from "./Home";
-import Subscribe from "./Subscribe";
+import Home from "./Components/Home";
+import Subscribe from "./Components/Subscribe";
 import { Routes, Route } from "react-router-dom";
-import Login from "./Login";
-import Tv from "./Tv";
+import Login from "./Components/Login";
+import Tv from "./Components/Tv";
 import { AuthContextProvider } from "./context/AuthContext";
 import Protected from "./Protected";
-import Watchlist from "./Watchlist";
-import Payment from "./Payment";
+import Watchlist from "./Components/Watchlist";
+import Payment from "./Components/Payment";
 import StripeContainer from "./StripeContainer";
-import Forget from "./Forget";
-import Reset from "./Reset";
+import Reset from "./Components/Reset";
+import Forget from "./Components/Forget"
 
 function App() {
   return (

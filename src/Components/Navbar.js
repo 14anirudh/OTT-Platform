@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
+import "../Styles/Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
-import { UserAuth } from "./context/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 
 function Navbar() {
   const { logout } = UserAuth();

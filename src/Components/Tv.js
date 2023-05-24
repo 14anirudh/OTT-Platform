@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import Row from "./Row";
-import requests from "./requests";
+import requests from "../requests";
 import {Link} from 'react-router-dom'
 
 const Tv = () => {
