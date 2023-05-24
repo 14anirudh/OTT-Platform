@@ -59,7 +59,6 @@ const Login = () => {
               <form>
                 <div className="flex items-center justify-center lg:justify-start">
                   <p className="text-3xl mr-4 mb-6">SIGN IN </p>
-
                 </div>
 
                 {/* <div className="flex items-center my-4 before:flex-1 before:border-t before:border-reed-300 before:mt-0.5 after:flex-1 after:border-t after:border-reed-300 after:mt-0.5">
@@ -93,10 +92,11 @@ const Login = () => {
                 </div>
 
                 <div className="flex justify-between items-center mb-6">
-                  <div className="form-group form-check">
-                    
-                  </div>
-                  <Link to="/forget" className="text-[#8E6E9F] hover:text-[#9AE39A]">
+                  <div className="form-group form-check"></div>
+                  <Link
+                    to="/forget"
+                    className="text-[#8E6E9F] hover:text-[#9AE39A]"
+                  >
                     Forgot password?
                   </Link>
                 </div>
