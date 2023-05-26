@@ -75,8 +75,8 @@ function Navbar() {
         <button className="btn" onClick={handleLogout}>
           Intermission
         </button>
-        <Link to="/favourites">
-          <button className="btn">Favourites</button>
+        <Link to="/watchlist">
+          <button className="btn">Watchlist</button>
         </Link>
       </div>
     </div>

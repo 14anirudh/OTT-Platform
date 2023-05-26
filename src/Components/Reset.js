@@ -16,7 +16,7 @@ const Reset = () => {
     console.log(code);
     try {
       await confirmPassword(code, password);
-      toastr.success("Password Updates Successfully");
+      toastr.success("Password Updated Successfully");
       navigate("/");
     } catch (e) {
       setError(e.message);

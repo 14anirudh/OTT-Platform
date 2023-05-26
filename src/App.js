@@ -12,7 +12,7 @@ import Protected from "./Protected";
 import StripeContainer from "./StripeContainer";
 import Reset from "./Components/Reset";
 import Forget from "./Components/Forget";
-import Fav from "./Components/Fav";
+import Watchlist from "./Components/Watchlist";
 
 function App() {
   return (
@@ -51,10 +51,10 @@ function App() {
               }
             />
             <Route
-              path="/favourites"
+              path="/watchlist"
               element={
                 <Protected>
-                  <Fav />
+                  <Watchlist />
                 </Protected>
               }
             />
