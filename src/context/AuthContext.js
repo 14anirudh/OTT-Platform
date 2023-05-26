@@ -30,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
     return sendPasswordResetEmail(auth, email);
   };
 
-   const confirmPassword = (code, password) => {
+  const confirmPassword = (code, password) => {
     return confirmPasswordReset(auth, code, password);
   };
 
@@ -46,7 +46,14 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ createUser, user, logout, signIn, resetPassword ,confirmPassword}}
+      value={{
+        createUser,
+        user,
+        logout,
+        signIn,
+        resetPassword,
+        confirmPassword,
+      }}
     >
       {children}
     </UserContext.Provider>

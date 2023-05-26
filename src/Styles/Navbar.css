@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 .navbar {
   position: sticky;
   top: 0;
@@ -29,9 +29,23 @@
 .btn:hover {
   transition: all 0.35s;
   border-radius: 4px;
-  color:#9AE39A;
+  color: #9ae39a;
 }
-
+.btn-search {
+  position: relative;
+  visibility: visible;
+  top: 10px;
+  right: 5px;
+  background-color:black;
+  height: 30px;
+}
+.srch {
+  width: 100px;
+  position:absolute;
+  left:50%;
+  /* transition: right 0.8s ease-in; */
+  visibility: hidden;
+}
 .btnl {
   float: left;
   margin: 5px 0px;
@@ -57,7 +71,7 @@
 .btnl:hover {
   transition: all 0.35s;
   border-radius: 4px;
-  color: #9AE39A;
+  color: #9ae39a;
 }
 .hamburger {
   display: none;
@@ -83,7 +97,7 @@
   text-decoration: none;
 }
 .menu li:hover {
-  color: #9AE39A;
+  color: #9ae39a;
   transition: all 0.35s;
 }
 
@@ -113,9 +127,9 @@
 
   .name {
     margin: 1px;
-    padding-top:2px;
+    padding-top: 2px;
     font-size: 1.35rem;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
   }
   .nav_black {
     background-color: black;

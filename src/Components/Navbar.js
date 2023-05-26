@@ -3,10 +3,11 @@ import "../Styles/Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import { BiSearch } from "react-icons/bi";
 
 function Navbar() {
   const { logout } = UserAuth();
-
+  const [search, setSearch] = useState(false);
   const [show, handleShow] = useState(false);
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const navigate = useNavigate();
@@ -18,6 +19,10 @@ function Navbar() {
     } catch (e) {
       console.log(e.message);
     }
+  };
+  const handleSearch = () => {
+    setSearch(!search);
+    console.log(search);
   };
 
   useEffect(() => {
@@ -57,14 +62,22 @@ function Navbar() {
         </ul>
       </div>
 
-      <div>
-        <Link to="/watchlist">
-          <button className="btn">Watchlist</button>
-        </Link>
+      <div className="d-flex justify-center items-center">
+        {/* <input
+          type="text"
+          className={`btn ${search?"btn-search":"srch" }`}
+          placeholder="Search"
+        />
+        <button className="btn" onClick={handleSearch}>
+          <BiSearch size={26} />
+        </button> */}
 
         <button className="btn" onClick={handleLogout}>
           Intermission
         </button>
+        <Link to="/favourites">
+          <button className="btn">Favourites</button>
+        </Link>
       </div>
     </div>
   );

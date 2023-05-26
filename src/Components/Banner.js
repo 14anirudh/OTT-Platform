@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "../axios";
 import requests from "../requests";
 import "../Styles/Banner.css";
-import YouTube from "react-youtube";
-import movieTrailer from "movie-trailer";
+
+import { WatchlistContext } from "../context/WatchlistContext";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
-  const [watchlist, setWatchlist] = useState([]);
   const [moviedesc, setMoviedesc] = useState("Movie Overview");
   const [value, setValue] = useState(0);
-  const [trailerUrl, setTrailerUrl] = useState("");
+
+  const { watchlist, addToWatchlist } = useContext(WatchlistContext);
+  console.log(watchlist);
 
   const handleClick = () => {
     if (value === 0) {
@@ -46,36 +47,6 @@ function Banner() {
       autoplay: 1,
     },
   };
-  const handlePlay = (movie) => {
-    if (trailerUrl) {
-      setTrailerUrl("");
-    } else {
-      movieTrailer(movie?.title || movie?.name || movie?.original_title || "")
-        .then((url) => {
-          const urlParams = new URLSearchParams(new URL(url).search);
-          setTrailerUrl(urlParams.get("v"));
-        })
-        .catch((error) => console.log(error));
-    }
-  };
-
-  // const handleMovie=()=>{
-  //   const movieData={
-  //     name:movie?.name || movie?.title || movie?.original_name,
-  //     movie:movie?.backdrop_path,
-  //     overview:movie?.overview
-  // }
-  // setWatchlist([...watchlist,movieData]);
-  // localStorage.setItem("watchlist",JSON.stringify(watchlist));
-  // console.log(watchlist);
-  // }
-
-  // const handleMovie=()=>{
-  //   console.log("Movie Added to Watchlist");
-  //   localStorage.setItem("name",movie?.name || movie?.title || movie?.original_name);
-  //   localStorage.setItem("movie",movie?.backdrop_path);
-  //   localStorage.setItem("overview",movie?.overview);
-  // }
 
   return (
     <header
@@ -93,10 +64,9 @@ function Banner() {
         </h1>
 
         <div className="buttons">
-          {/* <button className="button" onClick={() => handlePlay(movie)}>
-            Play Now
-          </button> */}
-          <button className="button">Add to Watchlist</button>
+          <button className="button" onClick={() => addToWatchlist(movie)}>
+            Add to Watchlist
+          </button>
         </div>
         <h2 className="description">
           {moviedesc}
@@ -111,11 +81,6 @@ function Banner() {
           )}
         </h2>
       </div>
-      {/* <div className="">
-      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-      </div> */}
-
-      {/* <div className="fadebutton" /> */}
     </header>
   );
 }

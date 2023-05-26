@@ -31,7 +31,6 @@
 .img:hover {
   transform: scale(1.2);
   border: 2px solid #F5F5F5;
-  
 }
 .largeimg {
   max-height: 250px;

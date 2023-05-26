@@ -15,12 +15,12 @@ const Home = () => {
         isLargeRow={true}
       />
       <Row
-        title="Top Grossing"
+        title="Top Grossers"
         fetchUrl={requests.fetchTopGrossing}
         isLargeRow={true}
       />
       <Row
-        title="Top Rated"
+        title="All Time Classics"
         fetchUrl={requests.fetchTopRated}
         isLargeRow={true}
       />

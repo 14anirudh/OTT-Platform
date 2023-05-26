@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
-import {toastr} from 'react-redux-toastr'
+import { toastr } from "react-redux-toastr";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,13 +18,15 @@ const Login = () => {
     setError("");
     try {
       await signIn(email, password);
-      toastr.success('Login Successfull')
+      toastr.success("Login Successfull");
       navigate("/home");
-
     } catch (e) {
       setError(e.message);
       console.log(e.message);
-      toastr.error('Error Logging In',e.message.substring(10,e.message.indexOf('.')))
+      toastr.error(
+        "Error Logging In",
+        e.message.substring(10, e.message.indexOf("."))
+      );
     }
   };
 
@@ -40,7 +42,7 @@ const Login = () => {
 
   return (
     <>
-      <div >
+      <div>
         <h1 className="text-4xl mx-4 pt-3 text-[#9AE39A] font-bold ">
           FLICKERS
         </h1>
