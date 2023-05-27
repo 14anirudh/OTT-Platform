@@ -15,7 +15,7 @@ function Banner() {
 
   const handleClick = () => {
     if (value === 0) {
-      setMoviedesc(movie?.overview);
+      setMoviedesc(truncate(movie?.overview, 200));
       setValue(1);
     } else {
       setMoviedesc(truncate(movie?.overview, 100));

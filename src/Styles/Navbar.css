@@ -102,8 +102,9 @@
 }
 
 @media (max-width: 500px) {
-  .btn {
-    display: none;
+  .btn{
+    padding: 0px 10px 0px 0px;
+    font-size: 1rem;
   }
   .hamburger {
     display: flex;
@@ -134,5 +135,9 @@
   .nav_black {
     background-color: black;
     height: 45px;
+  }
+  .btnl {
+    margin: 0px;
+    padding: 1px 0px;
   }
 }

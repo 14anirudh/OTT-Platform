@@ -1,14 +1,12 @@
-
 .row {
   margin-left: 15px;
   color: whitesmoke;
 }
 .row_title {
-  /* margin-top: 9px; */
-  padding: 10px;
+  margin-top: 14px;
+  padding: 0px;
   font-weight: 700;
-  color: #9AE39A;
-  font-size: 1.2rem;
+  color: #9ae39a;
 }
 .poster {
   display: flex;
@@ -30,7 +28,7 @@
 
 .img:hover {
   transform: scale(1.2);
-  border: 2px solid #F5F5F5;
+  border: 2px solid #f5f5f5;
 }
 .largeimg {
   max-height: 250px;
@@ -38,7 +36,6 @@
 .largeimg:hover {
   transform: scale(1.1);
   opacity: 1;
-  
 }
 @media (max-width: 450px) {
   .img {
