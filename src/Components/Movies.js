@@ -9,7 +9,7 @@ const Movies = () => {
       <div className="d-flex flex justify-between">
         <h1 className="mx-4 text-4xl text-[#9AE39A] font-bold py-4">MOVIES</h1>
         <Link to="/home">
-          <button className="p-4 hover:text-[#9AE39A] text-[#8E6E9F]]">
+          <button className="p-4 hover:text-[#9AE39A] text-[#8E6E9F]">
             Back to Home
           </button>
         </Link>

@@ -44,7 +44,11 @@ const Tv = () => {
         fetchUrl={requests.fetchtvtoday}
         isLargeRow={true}
       />
-      {/* <Row title="Trending in TV" fetchUrl={requests.fetchtv} isLargeRow={true} /> */}
+      <Row
+        title="Trending in TV"
+        fetchUrl={requests.fetchtv}
+        isLargeRow={true}
+      />
       <Row
         title="Top Rated in TV"
         fetchUrl={requests.fetchtoptv}
