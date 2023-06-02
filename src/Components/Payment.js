@@ -40,8 +40,8 @@ const Payment = () => {
     if (!error) {
       try {
         const { id } = paymentMethod;
-        // const response = await axios.post("https://helpful-elk-pinafore.cyclic.app/payment", {
-        const response = await axios.post("http://localhost:4000/payment", {
+        const response = await axios.post("https://helpful-elk-pinafore.cyclic.app/payment", {
+        // const response = await axios.post("http://localhost:4000/payment", {
           amount: 1000,
           id,
         });
