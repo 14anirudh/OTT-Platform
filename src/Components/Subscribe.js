@@ -45,7 +45,7 @@ const Subscribe = () => {
             <input
               type="text"
               className="form-control block w-full px-4 py-2 text-xl text-[#180920] font-normal text-reed-700 bg-white bg-clip-padding border border-solid border-reed-300 rounded transition ease-in-out m-0 focus:text-reed-700 focus:bg-white focus:border-[#9AE39A]  focus:outline-none"
-              id="exampleFormControlInput2"
+              id="email"
               placeholder="Email address"
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -58,7 +58,7 @@ const Subscribe = () => {
             <input
               type="password"
               className="form-control block w-full px-4 py-2 text-xl text-[#180920] font-normal text-reed-700 bg-white bg-clip-padding border border-solid border-reed-300 rounded transition ease-in-out m-0 focus:text-reed-700 focus:bg-white focus:border-[#9AE39A]  focus:outline-none"
-              id="exampleFormControlInput2"
+              id="password"
               placeholder="Password"
               onChange={(e) => {
                 setPassword(e.target.value);
@@ -69,6 +69,7 @@ const Subscribe = () => {
           <div className="text-center ">
             <button
               type="button"
+              id="pmt_button"
               className="inline-block w-[100%] px-7 py-3 bg-[#9AE39A]  text-[#180920] font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-[#8E6E9F] hover:text-[#9AE39A] hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#180920]  active:shadow-lg transition duration-150 ease-in-out"
               onClick={handleSubmit}
             >
